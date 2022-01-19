@@ -28,6 +28,10 @@ public class Seller {
     return this.sellerId;
   }
 
+  public String getStringSellerId() {
+    return this.sellerId.toString();
+  }
+
   public String getStringId() {
     return this.sellerId.toString();
   }
@@ -38,9 +42,21 @@ public class Seller {
     return period.getYears();
   }
 
-  public void verifyIsMajor() throws GenericException {
+  public void verifyIfMajor() throws GenericException {
     if (!(this.getAge() >= MAJOR_AGE)) {
       throw new SellerIsMinorException();
     }
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public String getStringCreatedAt() {
+    return this.createdAt.toString();
+  }
+
+  public String getBio() {
+    return this.bio;
   }
 }
