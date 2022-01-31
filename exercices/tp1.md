@@ -39,4 +39,71 @@ Lorsqu'on désire merger sa pull request, il suffit de faire une demande de chan
 `main`.
 
 
+## Planification du travail sur github
+
+### Photo comprenant les colonnes et les issues associées
+
+<img width="1673" alt="colonne_issues" src="https://user-images.githubusercontent.com/47373969/151815011-1b0af4a3-b200-434b-9619-7ea45b24e4e7.png">
+
+
+### Photo pour le milestone comprenant le titre, la description et les issues associées
+
+<img width="1406" alt="milestone" src="https://user-images.githubusercontent.com/47373969/151816112-7ed66381-e8c6-4cb8-975f-65789819992f.png">
+
+
+
+
+### Photo pour les issues avec tous les éléments demandés visibles
+
+<img width="1327" alt="issues" src="https://user-images.githubusercontent.com/47373969/151816494-6cc7b3f0-f414-4ce7-be0b-acf71627d5fb.png">
+
+
+
+#### Issues plus en détails
+
+<img width="1429" alt="issues1" src="https://user-images.githubusercontent.com/47373969/151816628-dfad092d-0751-408f-b797-5cbb8f82fb96.png">
+<img width="1418" alt="issues2" src="https://user-images.githubusercontent.com/47373969/151816633-f2cb8b85-529f-40e1-be03-123a23aa7b85.png">
+<img width="1173" alt="issues3" src="https://user-images.githubusercontent.com/47373969/151816634-52240888-6a1c-4622-89db-87593ec46a2f.png">
+
+
+
+### Nous avons rajouté quelques issues au cours du développement pour améliorer le projet, par exemple rajouter un linter, rajouter une meilleur gestion des exceptions, faire des modifications suite aux nouvelles demandes et etc... Voici la liste des issues lors de la fin du TP1
+
+![Screen Shot 2022-01-31 at 10 20 24 AM](https://user-images.githubusercontent.com/47373969/151820576-2986d07b-2f1c-4daf-9620-cc77b4539303.png)
+
+
+#### Issues rajoutés plus en détails 
+
+![Screen Shot 2022-01-31 at 10 22 12 AM](https://user-images.githubusercontent.com/47373969/151820839-c8e0a3c3-debe-4bef-8568-1c301d3a8550.png)
+
+![Screen Shot 2022-01-31 at 10 24 55 AM](https://user-images.githubusercontent.com/47373969/151821319-8b516082-4b63-4b33-9f4e-85f7444a9ddc.png)
+
+![image](https://user-images.githubusercontent.com/47373969/151821423-0b79cf44-8b17-470b-9084-4502d3dd77a7.png)
+
+![image](https://user-images.githubusercontent.com/47373969/151821633-6ae7c73b-7e9b-4ca3-a165-fc760ec18596.png)
+
+![image](https://user-images.githubusercontent.com/47373969/151822045-fa8dd402-1350-42f4-904f-6a6869205985.png)
+
+
+### Photo pour les PR avec tous les éléments demandés visibles
+
+![Screen Shot 2022-01-31 at 10 03 55 AM](https://user-images.githubusercontent.com/47373969/151818047-762cecec-7796-4b77-9986-82e7e7c527f7.png)
+![Screen Shot 2022-01-31 at 10 02 52 AM](https://user-images.githubusercontent.com/47373969/151818087-c835afbd-db6e-4fa8-8a3d-0be766c0a01d.png)
+![Screen Shot 2022-01-31 at 10 01 12 AM](https://user-images.githubusercontent.com/47373969/151819343-c58ca029-5001-4ebf-b028-306f8ae87d17.png)
+![Screen Shot 2022-01-31 at 10 01 54 AM](https://user-images.githubusercontent.com/47373969/151819511-a78cad17-1de5-4c3a-9fbe-be38b80b8313.png)
+
+
+
+
+### Photo pour les PR avec les issues rajoutés 
+
+![image](https://user-images.githubusercontent.com/47373969/151822473-db2cafa4-bea0-45da-a71e-f8ab696684dc.png)
+![image](https://user-images.githubusercontent.com/47373969/151824183-26b20ea7-1f58-4d06-9738-f9a562f1858f.png)
+![image](https://user-images.githubusercontent.com/47373969/151824842-298acae0-7e18-41bd-9b6b-65228b818d68.png)
+![image](https://user-images.githubusercontent.com/47373969/151824969-6593e9ad-a0e8-4374-b2a4-2b591e31a3dc.png)
+
+
+
+
+
 
