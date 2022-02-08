@@ -37,13 +37,13 @@ public class SellerResourceTest {
   private SellerService sellerService;
 
   @Mock
-  private ConstraintsValidator constraintsValidator;
-
-  @Mock
   private SellerAssembler sellerAssembler;
 
   @Mock
   private SellerIdFactory sellerIdFactory;
+
+  @Mock
+  private SellerRequestValidator sellerRequestValidator;
 
   private SellerResource sellerResource;
 
@@ -57,14 +57,14 @@ public class SellerResourceTest {
             this.sellerFactory,
             this.sellerService,
             this.sellerAssembler,
-            this.constraintsValidator,
-            this.sellerIdFactory
+            this.sellerIdFactory,
+            this.sellerRequestValidator
     );
   }
 
   @Test
   public void givenASellerRequest_whenCreateSeller_thenShouldAddSeller() throws GenericException {
-    given(this.sellerFactory.create(sellerRequest)).willReturn(this.seller);
+    given(this.sellerFactory.create(this.sellerRequest)).willReturn(this.seller);
 
     this.sellerResource.createSeller(this.sellerRequest);
 
@@ -72,12 +72,12 @@ public class SellerResourceTest {
   }
 
   @Test
-  public void givenASellerRequest_whenAddSeller_thenShouldCallTheConstraintValidator() throws GenericException {
-    given(this.sellerFactory.create(sellerRequest)).willReturn(this.seller);
+  public void givenASellerRequest_whenAddSeller_thenShouldCallTheSellerRequestValidator() throws GenericException {
+    given(this.sellerFactory.create(this.sellerRequest)).willReturn(this.seller);
 
     this.sellerResource.createSeller(this.sellerRequest);
 
-    verify(this.constraintsValidator).validate(this.sellerRequest);
+    verify(this.sellerRequestValidator).validate(this.sellerRequest);
   }
 
   @Test

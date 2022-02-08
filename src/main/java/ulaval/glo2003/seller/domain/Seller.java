@@ -1,6 +1,8 @@
 package ulaval.glo2003.seller.domain;
 
 import ulaval.glo2003.exception.GenericException;
+import ulaval.glo2003.product.domain.Product;
+import ulaval.glo2003.seller.domain.exceptions.SellerIsMinorException;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -14,7 +16,7 @@ public class Seller {
   private final String bio;
   private final LocalDate birthDate;
   private final LocalDateTime createdAt;
-  private final List<Product> products;
+  private List<Product> products;
   private static final int MAJOR_AGE = 18;
 
   public Seller(
@@ -73,6 +75,10 @@ public class Seller {
     return this.products;
   }
 
+  public void setProducts(List<Product> products) {
+    this.products = products;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
@@ -87,4 +93,5 @@ public class Seller {
   public int hashCode() {
     return Objects.hash(sellerId, name, bio, birthDate, createdAt);
   }
+
 }

@@ -1,4 +1,4 @@
-package ulaval.glo2003.seller.domain;
+package ulaval.glo2003.product.domain;
 
 import java.math.BigDecimal;
 
