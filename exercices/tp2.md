@@ -1,2 +1,4 @@
 # TP2
-![](../../../../../../../../var/folders/sh/pfhklq7d3x7bg939p9kb20ph0000gn/T/TemporaryItems/NSIRD_screencaptureui_bwnMwc/Screen Shot 2022-02-08 at 10.58.23 AM.png)
+
+<img width="1248" alt="Create Product" src="https://user-images.githubusercontent.com/47190894/153027532-44937aab-60fd-40cd-a5ab-035c7b586942.png">
+
