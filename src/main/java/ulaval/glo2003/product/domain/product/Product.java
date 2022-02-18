@@ -1,5 +1,7 @@
-package ulaval.glo2003.product.domain;
+package ulaval.glo2003.product.domain.product;
 
+import ulaval.glo2003.product.domain.Amount;
+import ulaval.glo2003.product.domain.Offers;
 import ulaval.glo2003.seller.domain.SellerId;
 
 import java.time.LocalDateTime;
@@ -14,7 +16,6 @@ public class Product {
   private final Offers offers;
   private final List<ProductCategory> productCategories;
   private final LocalDateTime createdAt;
-
 
   public Product(
           SellerId sellerId,
@@ -70,5 +71,9 @@ public class Product {
 
   public ProductId getProductId() {
     return this.productId;
+  }
+
+  public List<ProductCategory> getCategories() {
+    return this.productCategories;
   }
 }

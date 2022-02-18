@@ -1,6 +1,8 @@
-package ulaval.glo2003.product.api;
+package ulaval.glo2003.seller.api;
 
-public class ProductResponse {
+import ulaval.glo2003.product.api.offers.OffersResponse;
+
+public class SellerProductResponse {
   public final String id;
   public final String createdAt;
   public final String title;
@@ -8,7 +10,7 @@ public class ProductResponse {
   public final int suggestedPrice;
   public final OffersResponse offers;
 
-  public ProductResponse(
+  public SellerProductResponse(
           String id,
           String createdAt,
           String title,
