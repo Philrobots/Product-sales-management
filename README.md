@@ -59,7 +59,7 @@ mvn exec:java
 * Chaque membre de l'équipe s'engage à écrire du code de qualités respectant les principes SOLID-T ainsi que les guidelines du livre Clean code
 * Chaque fonctionnalité de l'application doit être tester unitairement sur chacun de ses comportements
 * Nom de convetion des branches
-  1. Pour les features : feat-(nom de l'issue)-(courte description)
+  1. Pour les features : feat-(numéro de l'issue)-(courte description)
   2. Pour les corrections : bugfix-(description)
 
   <br />
