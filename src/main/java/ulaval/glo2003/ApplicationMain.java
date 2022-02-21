@@ -4,7 +4,7 @@ import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 import ulaval.glo2003.health.api.HealthResource;
-import ulaval.glo2003.product.api.product.ProductResource;
+import ulaval.glo2003.product.api.ProductResource;
 import ulaval.glo2003.seller.api.SellerResource;
 
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.net.URI;
 
 public class ApplicationMain {
 
-  private static final String URL = "http://localhost:8080/";
+  private static final String URL = "http://localhost:8081/";
   private static final String PACKAGE = "ulaval.glo2003";
   private static final AppContext appContext = new AppContext();
 
@@ -41,8 +41,9 @@ public class ApplicationMain {
             appContext.productService,
             appContext.productAssembler,
             appContext.productIdFactory,
-            appContext.productRequestValidator);
-
+            appContext.productRequestValidator,
+            appContext.productFiltersFactory
+    );
   }
 
   private static SellerResource createSellerResource() {

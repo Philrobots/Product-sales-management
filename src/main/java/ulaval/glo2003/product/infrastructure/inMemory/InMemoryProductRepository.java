@@ -1,20 +1,26 @@
 package ulaval.glo2003.product.infrastructure.inMemory;
 
-import ulaval.glo2003.product.domain.product.Product;
-import ulaval.glo2003.product.domain.product.ProductId;
-import ulaval.glo2003.product.domain.product.ProductRepository;
+import ulaval.glo2003.product.domain.Product;
+import ulaval.glo2003.product.domain.ProductId;
+import ulaval.glo2003.product.domain.ProductRepository;
 import ulaval.glo2003.product.domain.exceptions.ProductNotFoundException;
 import ulaval.glo2003.seller.domain.SellerId;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Collections;
 
 
 public class InMemoryProductRepository implements ProductRepository {
   private final HashMap<SellerId, List<Product>> productsBySellerId = new HashMap<>();
   private final HashMap<ProductId, Product> productsByProductId = new HashMap<>();
+
+  @Override
+  public List<Product> findAll() {
+    return new LinkedList<>(productsByProductId.values());
+  }
 
   @Override
   public void save(Product product) {

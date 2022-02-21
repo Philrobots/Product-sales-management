@@ -6,9 +6,9 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import ulaval.glo2003.exception.GenericException;
 import ulaval.glo2003.product.domain.exceptions.ProductNotFoundException;
-import ulaval.glo2003.product.domain.product.Product;
+import ulaval.glo2003.product.domain.Product;
 import ulaval.glo2003.product.domain.ProductBuilder;
-import ulaval.glo2003.product.domain.product.ProductId;
+import ulaval.glo2003.product.domain.ProductId;
 import ulaval.glo2003.seller.domain.SellerId;
 
 import java.util.List;
@@ -28,6 +28,8 @@ class InMemoryProductRepositoryTest {
   private final ProductId ANOTHER_PRODUCT_ID = new ProductId();
 
   private final Product A_PRODUCT = new ProductBuilder().withSellerId(A_SELLER_ID).withProductId(A_PRODUCT_ID).build();
+  private final Product ANOTHER_PRODUCT = new ProductBuilder()
+          .withSellerId(ANOTHER_SELLER_ID).withProductId(ANOTHER_PRODUCT_ID).build();
 
   @Mock
   private Product product;
@@ -89,6 +91,16 @@ class InMemoryProductRepositoryTest {
     Product actualProduct = this.inMemoryProductRepository.findById(productId);
 
     assertEquals(product, actualProduct);
+  }
+
+  @Test
+  public void givenTwoProduct_whenGetAll_thenShouldReturnTheTwoProduct() {
+    this.inMemoryProductRepository.save(A_PRODUCT);
+    this.inMemoryProductRepository.save(ANOTHER_PRODUCT);
+
+    List<Product> products = this.inMemoryProductRepository.findAll();
+
+    assertEquals(products.size(), 2);
   }
 
   private void givenAProduct(Product product) {

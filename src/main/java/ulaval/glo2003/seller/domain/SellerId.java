@@ -1,5 +1,6 @@
 package ulaval.glo2003.seller.domain;
 
+import ulaval.glo2003.seller.domain.exceptions.InvalidSellerIdException;
 import ulaval.glo2003.util.UUIDGenerator;
 
 import java.util.Objects;
@@ -12,8 +13,12 @@ public class SellerId {
     this.id = UUIDGenerator.generate();
   }
 
-  public SellerId(String sellerId) {
-    this.id = UUID.fromString(sellerId);
+  public SellerId(String sellerId) throws InvalidSellerIdException {
+    try {
+      this.id = UUID.fromString(sellerId);
+    } catch (Exception e) {
+      throw new InvalidSellerIdException();
+    }
   }
 
   public String toString() {
@@ -25,7 +30,7 @@ public class SellerId {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     SellerId sellerId = (SellerId) o;
-    return id.equals(sellerId.id);
+    return id.toString().equals(sellerId.id.toString());
   }
 
   @Override

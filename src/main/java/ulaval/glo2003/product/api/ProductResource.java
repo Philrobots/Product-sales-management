@@ -1,4 +1,4 @@
-package ulaval.glo2003.product.api.product;
+package ulaval.glo2003.product.api;
 
 import jakarta.ws.rs.HeaderParam;
 import jakarta.ws.rs.POST;
@@ -6,16 +6,23 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.DefaultValue;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.QueryParam;
 import ulaval.glo2003.exception.GenericException;
-import ulaval.glo2003.product.domain.product.Product;
-import ulaval.glo2003.product.domain.product.ProductId;
-import ulaval.glo2003.product.domain.product.ProductIdFactory;
+import ulaval.glo2003.product.api.assembler.ProductAssembler;
+import ulaval.glo2003.product.api.response.ProductResponse;
+import ulaval.glo2003.product.api.response.ProductsResponse;
+import ulaval.glo2003.product.domain.Product;
+import ulaval.glo2003.product.domain.ProductFilters;
+import ulaval.glo2003.product.domain.ProductId;
+import ulaval.glo2003.product.domain.ProductWithSeller;
+import ulaval.glo2003.product.domain.ProductIdFactory;
 import ulaval.glo2003.product.service.ProductService;
-import ulaval.glo2003.seller.domain.Seller;
 
 import java.net.URI;
+import java.util.List;
 
 @Path("/products")
 @Produces(MediaType.APPLICATION_JSON)
@@ -26,18 +33,21 @@ public class ProductResource {
   private final ProductAssembler productAssembler;
   private final ProductRequestValidator productRequestValidator;
   private final ProductIdFactory productIdFactory;
+  private final ProductFiltersFactory productFiltersFactory;
 
   public ProductResource(
           ProductFactory productFactory,
           ProductService productService,
           ProductAssembler productAssembler,
           ProductIdFactory productIdFactory,
-          ProductRequestValidator productRequestValidator) {
+          ProductRequestValidator productRequestValidator,
+          ProductFiltersFactory productFiltersFactory) {
     this.productFactory = productFactory;
     this.productService = productService;
     this.productAssembler = productAssembler;
     this.productIdFactory = productIdFactory;
     this.productRequestValidator = productRequestValidator;
+    this.productFiltersFactory = productFiltersFactory;
   }
 
   @POST
@@ -63,12 +73,34 @@ public class ProductResource {
     try {
       ProductId productId = this.productIdFactory.create(id);
 
-      Product product = this.productService.getProductById(productId);
-      Seller seller = this.productService.getProductOwner(product.getSellerId());
+      ProductWithSeller productWithSeller = this.productService.getProductWithSeller(productId);
 
-      ProductResponse productResponse = this.productAssembler.toResponse(product, seller);
+      ProductResponse productResponse = this.productAssembler.toResponse(productWithSeller);
 
       return Response.ok().entity(productResponse).build();
+    } catch (GenericException e) {
+      return Response.status(e.getStatus()).entity(e.getErrorResponse()).build();
+    }
+  }
+
+  @GET
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response getFilteredProducts(@DefaultValue("") @QueryParam("sellerId") String sellerId,
+                                      @DefaultValue("") @QueryParam("title") String title,
+                                      @QueryParam("categories") List<String> categories,
+                                      @DefaultValue("0") @QueryParam("minPrice") int minPrice,
+                                      @DefaultValue("0") @QueryParam("maxPrice") int maxPrice) {
+
+    try {
+      ProductFilters productFilters = this.productFiltersFactory.create(
+              sellerId, title, categories, minPrice, maxPrice
+      );
+
+      List<ProductWithSeller> products = this.productService.getFilteredProducts(productFilters);
+
+      ProductsResponse productsResponse = this.productAssembler.toProductsResponse(products);
+
+      return Response.ok().entity(productsResponse).build();
     } catch (GenericException e) {
       return Response.status(e.getStatus()).entity(e.getErrorResponse()).build();
     }

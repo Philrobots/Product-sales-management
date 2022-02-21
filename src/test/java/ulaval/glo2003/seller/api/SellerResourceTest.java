@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import ulaval.glo2003.exception.ConstraintsValidator;
 import ulaval.glo2003.exception.GenericException;
 import ulaval.glo2003.seller.domain.Seller;
 import ulaval.glo2003.seller.domain.SellerBuilder;
@@ -48,8 +47,6 @@ public class SellerResourceTest {
   private SellerResource sellerResource;
 
   private final static String A_SELLER_STRING_ID = "5a3e3b0b-19a6-46cd-a0fe-bf16f42ba492";
-  private final static SellerId A_SELLER_ID = new SellerId(A_SELLER_STRING_ID);
-
 
   @BeforeEach
   public void setUp() {
@@ -81,7 +78,7 @@ public class SellerResourceTest {
   }
 
   @Test
-  public void givenASellerId_whenGetSellerById_thenShouldCreateSellerId() {
+  public void givenASellerId_whenGetSellerById_thenShouldCreateSellerId() throws GenericException{
     this.sellerResource.getSellerById(A_SELLER_STRING_ID);
 
     verify(this.sellerIdFactory).create(A_SELLER_STRING_ID);
@@ -89,17 +86,19 @@ public class SellerResourceTest {
 
   @Test
   public void givenASellerId_whenGetSellerById_thenShouldGetSellerById() throws GenericException {
-    givenASellerId();
+    SellerId aSellerId = new SellerId(A_SELLER_STRING_ID);
+    givenASellerId(aSellerId);
 
     this.sellerResource.getSellerById(A_SELLER_STRING_ID);
 
-    verify(this.sellerService).getSellerById(A_SELLER_ID);
+    verify(this.sellerService).getSellerById(aSellerId);
   }
 
   @Test
   public void givenASellerId_whenGetSellerById_thenShouldReturnSellerResponseWithEntity() throws GenericException {
-    givenASellerId();
-    Seller aSeller = givenASeller();
+    SellerId aSellerId = new SellerId(A_SELLER_STRING_ID);
+    givenASellerId(aSellerId);
+    Seller aSeller = givenASeller(aSellerId);
     SellerResponse aSellerResponse = givenASellerResponse(aSeller);
 
     Response expectedResponse = Response.ok().entity(aSellerResponse).build();
@@ -114,13 +113,13 @@ public class SellerResourceTest {
     return aSellerResponse;
   }
 
-  private Seller givenASeller() throws GenericException {
+  private Seller givenASeller(SellerId sellerId) throws GenericException {
     Seller aSeller = new SellerBuilder().build();
-    given(this.sellerService.getSellerById(A_SELLER_ID)).willReturn(aSeller);
+    given(this.sellerService.getSellerById(sellerId)).willReturn(aSeller);
     return aSeller;
   }
 
-  private void givenASellerId() {
-    given(this.sellerIdFactory.create(A_SELLER_STRING_ID)).willReturn(A_SELLER_ID);
+  private void givenASellerId(SellerId aSellerId) throws GenericException {
+    given(this.sellerIdFactory.create(A_SELLER_STRING_ID)).willReturn(aSellerId);
   }
 }

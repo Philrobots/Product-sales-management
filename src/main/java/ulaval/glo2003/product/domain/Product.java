@@ -1,7 +1,5 @@
-package ulaval.glo2003.product.domain.product;
+package ulaval.glo2003.product.domain;
 
-import ulaval.glo2003.product.domain.Amount;
-import ulaval.glo2003.product.domain.Offers;
 import ulaval.glo2003.seller.domain.SellerId;
 
 import java.time.LocalDateTime;
@@ -14,7 +12,7 @@ public class Product {
   private final String description;
   private final Amount suggestedPrice;
   private final Offers offers;
-  private final List<ProductCategory> productCategories;
+  private final Categories categories;
   private final LocalDateTime createdAt;
 
   public Product(
@@ -24,7 +22,7 @@ public class Product {
           String description,
           Amount suggestedPrice,
           Offers offers,
-          List<ProductCategory> productCategories,
+          Categories categories,
           LocalDateTime createdAt
   ) {
     this.sellerId = sellerId;
@@ -34,7 +32,7 @@ public class Product {
     this.description = description;
     this.suggestedPrice = suggestedPrice;
     this.offers = offers;
-    this.productCategories = productCategories;
+    this.categories = categories;
   }
 
   public SellerId getSellerId() {
@@ -57,8 +55,12 @@ public class Product {
     return this.description;
   }
 
-  public int getSuggestedPriceAmount() {
-    return this.suggestedPrice.getAmount();
+  public Amount getSuggestedPriceAmount() {
+    return this.suggestedPrice;
+  }
+
+  public int getSuggestedPriceAmountIntValue() {
+    return this.suggestedPrice.getIntValue();
   }
 
   public Offers getOffers() {
@@ -73,7 +75,23 @@ public class Product {
     return this.productId;
   }
 
-  public List<ProductCategory> getCategories() {
-    return this.productCategories;
+  public List<Category> getProductCategories() {
+    return this.categories.getCategories();
+  }
+
+  public Categories getCategories() {
+    return categories;
+  }
+
+  public boolean isInTitle(String value) {
+    return this.title.toLowerCase().contains(value.toLowerCase());
+  }
+
+  public boolean hasSameSellerId(SellerId sellerId) {
+    return this.sellerId.equals(sellerId);
+  }
+
+  public boolean hasAtLeastOneCategoryInCommon(Categories categories) {
+    return this.categories.hasAtLeastOneCategoryInCommon(categories);
   }
 }
