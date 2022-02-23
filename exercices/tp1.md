@@ -4,7 +4,7 @@
 
 ### Comment nommer son commit
 
-Lors d'un commit, le message devrait e3tre structuré ainsi:
+Lors d'un commit, le message devrait être structuré ainsi:
 
 `<type>(# issue): <description du commit>`
 
