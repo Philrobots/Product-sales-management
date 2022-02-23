@@ -6,7 +6,7 @@
 
 Lors d'un commit, le message devrait e3tre structuré ainsi:
 
-`<type>[# issue]: <description du commit>`
+`<type>(# issue): <description du commit>`
 
 Il y a différents types de commit : 
 1. `feat` : Introduit une nouvelle feature au codebase
