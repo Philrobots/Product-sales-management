@@ -25,16 +25,12 @@ import ulaval.glo2003.seller.api.SellerFactory;
 import ulaval.glo2003.seller.api.SellerRequestValidator;
 import ulaval.glo2003.seller.domain.SellerIdFactory;
 import ulaval.glo2003.seller.domain.SellerRepository;
+import ulaval.glo2003.seller.infrastructure.MongoDbSellerAssembler;
 import ulaval.glo2003.seller.infrastructure.inMemory.InMemorySellerRepository;
 import ulaval.glo2003.seller.infrastructure.mongoDb.repository.MongoDBSellerRepository;
 import ulaval.glo2003.seller.service.SellerService;
 
 public class AppContext {
-
-  //assemblers
-  public final OffersAssembler offersAssembler = new OffersAssembler();
-  public final ProductAssembler productAssembler = new ProductAssembler(offersAssembler);
-  public final SellerAssembler sellerAssembler = new SellerAssembler(productAssembler);
 
   //factories
   public final CategoriesFactory categoriesFactory = new CategoriesFactory();
@@ -50,15 +46,23 @@ public class AppContext {
   public final OfferFactory offerFactory = new OfferFactory(productIdFactory);
 
 
+  //assemblers
+  public final OffersAssembler offersAssembler = new OffersAssembler();
+  public final ProductAssembler productAssembler = new ProductAssembler(offersAssembler);
+  public final SellerAssembler sellerAssembler = new SellerAssembler(productAssembler);
+  public final MongoDbSellerAssembler mongoDbSellerAssembler = new MongoDbSellerAssembler();
+
   // datastore
   public final Datastore datastore = MongoDbSetUp.getDatastore();
 
   //repositories
-  public final MongoDBSellerRepository mongoDBSellerRepository = new MongoDBSellerRepository(datastore);
+  public final SellerRepository mongoDBSellerRepository = new MongoDBSellerRepository(datastore,
+          mongoDbSellerAssembler);
   public final MongoDBProductRepository mongoDBProductRepository = new MongoDBProductRepository(datastore);
   public final SellerRepository sellerRepository = new InMemorySellerRepository();
   public final ProductRepository productRepository = new InMemoryProductRepository();
   public final OfferRepository offerRepository = new InMemoryOfferRepository();
+
 
   // domain
   public final ProductSellerDomainService productSellerDomainService = new ProductSellerDomainService(
