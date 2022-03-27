@@ -1,6 +1,7 @@
 package ulaval.glo2003;
 
 import dev.morphia.Datastore;
+import ulaval.glo2003.context.DatastoreProvider;
 import ulaval.glo2003.exception.ConstraintsValidator;
 import ulaval.glo2003.product.domain.OfferFactory;
 import ulaval.glo2003.product.api.validator.OfferRequestValidator;
@@ -53,11 +54,13 @@ public class AppContext {
   public final MongoDbSellerAssembler mongoDbSellerAssembler = new MongoDbSellerAssembler();
 
   // datastore
-  public final Datastore datastore = MongoDbSetUp.getDatastore();
+  public final Datastore datastore = DatastoreProvider.getDatastore();
 
   //repositories
-  public final SellerRepository mongoDBSellerRepository = new MongoDBSellerRepository(datastore,
-          mongoDbSellerAssembler);
+  public final SellerRepository mongoDBSellerRepository = new MongoDBSellerRepository(
+          datastore,
+          mongoDbSellerAssembler
+  );
   public final MongoDBProductRepository mongoDBProductRepository = new MongoDBProductRepository(datastore);
   public final SellerRepository sellerRepository = new InMemorySellerRepository();
   public final ProductRepository productRepository = new InMemoryProductRepository();
