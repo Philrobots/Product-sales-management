@@ -3,6 +3,7 @@ package ulaval.glo2003.product.domain;
 import java.time.LocalDateTime;
 
 public class OfferBuilder {
+  private final OfferId offerId;
   private ProductId productId;
   private Amount amount;
   private final String message;
@@ -11,6 +12,7 @@ public class OfferBuilder {
 
   public OfferBuilder() {
     this.productId = new ProductId();
+    this.offerId = new OfferId();
     this.amount = Amount.fromDouble(10.0);
     this.message = "This is a message";
     this.buyer = new Buyer("MARINO", new Email("CapatinBarbossa@email.ca"), new PhoneNumber("14181234567"));
@@ -28,7 +30,7 @@ public class OfferBuilder {
 
   public Offer build() {
     return new Offer(
-            new OfferId(),
+            offerId,
             this.productId,
             this.amount,
             this.message,

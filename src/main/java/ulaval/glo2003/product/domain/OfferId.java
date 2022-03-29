@@ -37,5 +37,4 @@ public class OfferId {
   public int hashCode() {
     return Objects.hash(id);
   }
-
 }

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import ulaval.glo2003.exception.GenericException;
 import ulaval.glo2003.product.domain.Offer;
 import ulaval.glo2003.product.domain.OfferBuilder;
 import ulaval.glo2003.product.domain.OfferRepository;
@@ -55,7 +56,7 @@ class SellerWithProductsDomainServiceTest {
   }
 
   @Test
-  public void givenASeller_whenGetSellerWithProducts_thenShouldCallTheRepositoryToGetProducts() {
+  public void givenASeller_whenGetSellerWithProducts_thenShouldCallTheRepositoryToGetProducts() throws GenericException {
     givenProducts(Collections.emptyList());
 
     this.sellerWithProductsDomainService.getSellerWithProducts(A_SELLER);
@@ -64,7 +65,7 @@ class SellerWithProductsDomainServiceTest {
   }
 
   @Test
-  public void givenASeller_whenGetSellerWithProducts_thenShouldCallTheOfferRepositoryForEachProduct() {
+  public void givenASeller_whenGetSellerWithProducts_thenShouldCallTheOfferRepositoryForEachProduct() throws GenericException {
     givenProducts(List.of(A_PRODUCT));
 
     this.sellerWithProductsDomainService.getSellerWithProducts(A_SELLER);
@@ -73,7 +74,7 @@ class SellerWithProductsDomainServiceTest {
   }
 
   @Test
-  public void givenASeller_whenGetSellerWithProducts_thenShouldReturnSellerWithProducts() {
+  public void givenASeller_whenGetSellerWithProducts_thenShouldReturnSellerWithProducts() throws GenericException {
     givenProducts(List.of(A_PRODUCT));
     given(this.offerRepository.findByProductId(A_PRODUCT_ID)).willReturn(List.of(AN_OFFER));
 
@@ -85,7 +86,7 @@ class SellerWithProductsDomainServiceTest {
     assertEquals(expected, actual);
   }
 
-  private void givenProducts(List<Product> products) {
+  private void givenProducts(List<Product> products) throws GenericException {
     given(this.productRepository.findBySellerId(A_SELLER.getSellerId())).willReturn(products);
   }
 }

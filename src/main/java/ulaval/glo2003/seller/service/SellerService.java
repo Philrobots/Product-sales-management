@@ -46,4 +46,10 @@ public class SellerService {
 
     return this.sellerWithProductsDomainService.getSellerWithProducts(seller);
   }
+
+  public void deleteAll() {
+    if (System.getenv("DATABASE_NAME").equals("floppa-dev")) {
+      this.sellerRepository.clear();
+    }
+  }
 }

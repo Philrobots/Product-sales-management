@@ -53,4 +53,8 @@ public class SellerEnd2EndTestUtils {
   public static SellerResponse getSellerResponseBody(String sellerId) {
     return getSellerResponse(sellerId).getBody().as(SellerResponse.class);
   }
+
+  public static void clearSellersDatabase() {
+    given().delete(SELLER_END_POINT + "/clear");
+  }
 }

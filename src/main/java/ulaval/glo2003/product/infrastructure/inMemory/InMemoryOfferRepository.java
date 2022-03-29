@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class InMemoryOfferRepository implements OfferRepository {
-  private final HashMap<ProductId, List<Offer>> offersByProductId = new HashMap<>();
+  private HashMap<ProductId, List<Offer>> offersByProductId = new HashMap<>();
 
   @Override
   public void save(Offer offer) {
@@ -25,5 +25,10 @@ public class InMemoryOfferRepository implements OfferRepository {
     }
 
     return offers;
+  }
+
+  @Override
+  public void clear() {
+    this.offersByProductId = new HashMap<>();
   }
 }

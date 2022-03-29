@@ -34,6 +34,12 @@ public class GetProductEnd2EndTest {
     stop();
   }
 
+  @AfterAll
+  public static void clearDatabase() {
+    ProductEnd2EndTestUtils.clearProductsDatabase();
+    SellerEnd2EndTestUtils.clearSellersDatabase();
+  }
+
   @Test
   public void givenAProductRequest_whenGetProduct_thenShouldReturn200StatusCode() {
     String sellerId = createSellerGetId();

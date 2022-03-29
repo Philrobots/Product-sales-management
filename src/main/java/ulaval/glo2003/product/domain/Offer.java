@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Offer {
-
   private final OfferId offerId;
   private final ProductId productId;
   private final Amount amount;
@@ -25,6 +24,10 @@ public class Offer {
     this.amount = amount;
     this.message = message;
     this.createdAt = createdAt;
+  }
+
+  public OfferId getOfferId() {
+    return this.offerId;
   }
 
   public String getCreatedAt() {
@@ -55,6 +58,18 @@ public class Offer {
     return this.buyer;
   }
 
+  public String getBuyerName() {
+    return this.buyer.getName();
+  }
+
+  public String getBuyerEmail() {
+    return this.buyer.getEmail();
+  }
+
+  public String getBuyerPhoneNumber() {
+    return this.buyer.getPhoneNumber();
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
@@ -72,4 +87,5 @@ public class Offer {
   public int hashCode() {
     return Objects.hash(offerId, productId, amount, message, createdAt, buyer);
   }
+
 }

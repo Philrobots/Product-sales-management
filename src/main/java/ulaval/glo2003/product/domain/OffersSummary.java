@@ -11,6 +11,16 @@ public class OffersSummary {
 
   public OffersSummary() {
     this.count = 0;
+    this.mean = null;
+    this.min = null;
+    this.max = null;
+  }
+
+  public OffersSummary(Amount mean, Integer count, Amount min, Amount max) {
+    this.mean = mean;
+    this.count = count;
+    this.min = min;
+    this.max = max;
   }
 
   public Double getMeanAmount() {

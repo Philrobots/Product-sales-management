@@ -1,5 +1,6 @@
 package ulaval.glo2003.seller.domain;
 
+import ulaval.glo2003.exception.GenericException;
 import ulaval.glo2003.product.domain.Offer;
 import ulaval.glo2003.product.domain.OfferRepository;
 import ulaval.glo2003.product.domain.Product;
@@ -28,7 +29,7 @@ public class SellerWithProductsDomainService {
     this.productWithOffersFactory = productWithOffersFactory;
   }
 
-  public SellerWithProducts getSellerWithProducts(Seller seller) {
+  public SellerWithProducts getSellerWithProducts(Seller seller) throws GenericException {
     List<Product> products = this.productRepository.findBySellerId(seller.getSellerId());
 
     List<ProductWithOffers> productsWithOffers = this.getProductWithOffers(products);
@@ -39,12 +40,12 @@ public class SellerWithProductsDomainService {
     );
   }
 
-  private List<ProductWithOffers> getProductWithOffers(List<Product> products) {
+  private List<ProductWithOffers> getProductWithOffers(List<Product> products) throws GenericException {
     Map<Product, List<Offer>> productsWithOffers = new HashMap<>();
 
-    products.forEach((product) -> {
+    for (Product product : products) {
       productsWithOffers.put(product, this.offerRepository.findByProductId(product.getProductId()));
-    });
+    }
 
     return this.createProductWithOffers(productsWithOffers);
   }

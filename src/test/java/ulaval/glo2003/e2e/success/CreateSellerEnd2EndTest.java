@@ -29,6 +29,12 @@ public class CreateSellerEnd2EndTest {
     stop();
   }
 
+  @AfterAll
+  public static void clearDatabase() {
+    ProductEnd2EndTestUtils.clearProductsDatabase();
+    SellerEnd2EndTestUtils.clearSellersDatabase();
+  }
+
 
   @Test
   public void givenSellerInformation_whenCreateASeller_thenShouldReturn201StatusCode() {
