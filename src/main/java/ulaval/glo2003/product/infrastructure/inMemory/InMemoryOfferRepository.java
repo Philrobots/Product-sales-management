@@ -15,4 +15,15 @@ public class InMemoryOfferRepository implements OfferRepository {
   public void save(Offer offer) {
     this.offersByProductId.computeIfAbsent(offer.getProductId(), k -> new ArrayList<>()).add(offer);
   }
+
+  @Override
+  public List<Offer> findByProductId(ProductId productId) {
+    List<Offer> offers = this.offersByProductId.get(productId);
+
+    if (offers == null) {
+      return new ArrayList<>();
+    }
+
+    return offers;
+  }
 }

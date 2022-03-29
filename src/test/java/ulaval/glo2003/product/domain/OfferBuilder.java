@@ -1,21 +1,19 @@
 package ulaval.glo2003.product.domain;
 
+import java.time.LocalDateTime;
+
 public class OfferBuilder {
   private ProductId productId;
-  private final String name;
-  private final Email email;
-  private final PhoneNumber phoneNumber;
   private Amount amount;
   private final String message;
+  private final Buyer buyer;
 
 
   public OfferBuilder() {
     this.productId = new ProductId();
-    this.name = "MARINO";
-    this.email = new Email("CapatinBarbossa@email.ca");
-    this.phoneNumber = new PhoneNumber("4181234567");
     this.amount = Amount.fromDouble(10.0);
     this.message = "This is a message";
+    this.buyer = new Buyer("MARINO", new Email("CapatinBarbossa@email.ca"), new PhoneNumber("14181234567"));
   }
 
   public OfferBuilder withAmount(Amount amount) {
@@ -30,12 +28,12 @@ public class OfferBuilder {
 
   public Offer build() {
     return new Offer(
+            new OfferId(),
             this.productId,
-            this.name,
-            this.email,
-            this.phoneNumber,
             this.amount,
-            this.message
+            this.message,
+            LocalDateTime.now(),
+            this.buyer
     );
   }
 }
