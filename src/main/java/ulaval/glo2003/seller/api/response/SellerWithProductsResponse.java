@@ -12,6 +12,9 @@ public class SellerWithProductsResponse {
   public String birthDate;
   public List<ProductWithOffersResponse> products;
 
+  public SellerWithProductsResponse() {
+  }
+
   public SellerWithProductsResponse(
           String id,
           String name,
