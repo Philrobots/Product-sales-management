@@ -3,13 +3,66 @@
 ## Planification du travail sur github
 
 ### 1 pour le Project comprenant les colonnes et les issues associées
+
+![image](https://user-images.githubusercontent.com/47373969/165154181-77f5bae8-2938-4eab-9166-c48b71143dff.png)
+
 ### 1 pour le milestone comprenant le titre, la description et les issues associées
+
+![image](https://user-images.githubusercontent.com/47373969/165154585-c16e2967-4dbb-421a-b8e2-7ad1c8e02da6.png)
+
 
 ### 3 pour les issues avec tous les éléments demandés visibles
 
+#### Feature de compteur de vues sur les produits 
+
+![image](https://user-images.githubusercontent.com/47373969/165155756-cc8b57c0-0de4-4f16-bd6c-e2734923d0ba.png)
+
+#### Outils de métrique 
+
+![image](https://user-images.githubusercontent.com/47373969/165155998-2e3fa344-fbc0-4947-951d-2fd8283d56af.png)
+
+#### Open source 
+
+![image](https://user-images.githubusercontent.com/47373969/165156122-d988dcc1-7ca4-4b77-81bd-21b20dd884e8.png)
+
+
+
 ### 3 pour les PR avec tous les éléments demandés visibles
 
+#### Feature de compteur de vues sur les produits 
+
+![image](https://user-images.githubusercontent.com/47373969/165154947-3f1e0693-fdb4-4053-b2ba-137b9e74f696.png)
+
+![image](https://user-images.githubusercontent.com/47373969/165156316-2d93ad00-061b-4b00-bc92-16bb8ec7428f.png)
+
+
+#### Outils de métrique 
+
+![image](https://user-images.githubusercontent.com/47373969/165155015-3ea1ae83-0d06-4d34-b5b8-fd32dbbb21f2.png)
+
+![image](https://user-images.githubusercontent.com/47373969/165156678-3630244e-5b29-44b2-a347-ed6152d08e28.png)
+
+
+#### Open source
+
+![image](https://user-images.githubusercontent.com/47373969/165155626-7dfb66e6-f6af-41f3-9778-0cbd35d99688.png)
+
+![image](https://user-images.githubusercontent.com/47373969/165156928-abac6afe-6d9d-4702-a941-f9567fbcfacd.png)
+
+
+
+
 ### 1 pour votre arbre de commits et de branches (au moins 3 branches et/ou 10 commits visibles)
+
+Commit sur la branche principale main : 
+
+![image](https://user-images.githubusercontent.com/47373969/165154815-c2d57609-3817-4cec-b546-79403bf89912.png)
+
+Branche : 
+
+![image](https://user-images.githubusercontent.com/47373969/165155282-79cdf7a4-28fd-4964-9acb-772a69e34256.png)
+
+
 
 ## Outils de métriques
 
