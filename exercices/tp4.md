@@ -68,7 +68,7 @@ Branche :
 
 ### Outil d'analyse de la qualité du code
 
-Nous avons utilisé SonarCube qui s'intègre directement avec notre CI à l'aide de SonarCLoud.
+Nous avons utilisé SonarCloud qui s'intègre directement avec notre CI.
 
 ![image](https://user-images.githubusercontent.com/47373969/164241804-8f8c8a00-a704-49e3-9883-1726a9f633e0.png)
 
@@ -76,6 +76,8 @@ Nous avons utilisé SonarCube qui s'intègre directement avec notre CI à l'aide
 ![image](https://user-images.githubusercontent.com/47373969/164241716-9594923e-fb12-4b95-b214-d7b009495c1a.png)
 
 ![image](https://user-images.githubusercontent.com/47373969/164242012-ae674c32-e295-40c1-996c-e9e2ca952b0f.png)
+
+![image](https://user-images.githubusercontent.com/47373969/165157528-55c449af-1203-4d64-a4c1-a0bd4532fbc6.png)
 
 
 ### Outil de détection des failles de sécurités 
