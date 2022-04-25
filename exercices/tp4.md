@@ -1,5 +1,16 @@
 # TP4
 
+## Planification du travail sur github
+
+### 1 pour le Project comprenant les colonnes et les issues associées
+### 1 pour le milestone comprenant le titre, la description et les issues associées
+
+### 3 pour les issues avec tous les éléments demandés visibles
+
+### 3 pour les PR avec tous les éléments demandés visibles
+
+### 1 pour votre arbre de commits et de branches (au moins 3 branches et/ou 10 commits visibles)
+
 ## Outils de métriques
 
 ### Outil d'analyse de la qualité du code
