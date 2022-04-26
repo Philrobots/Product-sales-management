@@ -118,3 +118,118 @@ Encore une fois, l'outil Sonarcloud nous donne notre test coverage globale.
 ![image](https://user-images.githubusercontent.com/47373969/164244404-225a0408-20fd-48f8-a51a-79fff84b3ebc.png)
 
 
+## Open source
+
+
+### Préparation 
+
+#### 1.Nommez 3 avantages à contribuer à des projets open source en tant qu'entreprise et justifiez en quoi cela peut être bénéfique pour tous.
+
+#### 3 avantages à contribuer à des projets open source en tant qu'entreprise 
+
+Le première avantage que nous avons discuté est qu'une entreprise faisant utilisation d'un logiciel open source a la possibilité 
+d'embaucher un développeur logiciel pour qu'il puisse apporter des améliorations personnalisées au logiciel plutôt que de se fier aux décisions d'un 
+fournissuer d'une source privée ou la contribution externe n'est pas possible.
+
+Le deuxième avantage que nous avons discuté en équipe est qu'une entreprise qui contribue à des projets open source peut cibler des développeurs 
+contribuant habilement au logiciel open source et ainsi potentiellement leur offrir un emploi dans la compagnie. Contribuez au projet open source peut
+donc être une certaine manière de recruter des développeurs logiciels compétants.
+
+Le troisième avantage est de réduire le coût total d'utilisation des produits logiciels de l'entreprise. En effet, ce qui rend les projets open source
+unique est qu'un organisation peut utiliser le projet open source comme bon lui semble sans payez de frais d'utilisations ou de frais de propriété
+intellectuelle. Une entreprise peut donc faire l'utilisation d'un projet open source plutôt de payer un produit à frais élevée.
+
+#### Justifiez en quoi cela peut être bénéfique pour tous
+La contribution des compagnies est bénéfique pour tous étant donnée qu'une même compagnie regroupe plusieurs développeurs, donc si une compagnie décide de contribuer aux projets open
+ source, cela veut dire que plusieurs développeurs vont contribuer. Cela fait donc en sorte que la contribution des compagnies 
+dans le domaine de l'open source aggrandie grandement la communauté de l'open source. Aussi, les grosses organisations technologiques ont énormement de pouvoir sur les différents
+mouvements technologiques, donc si les grosses compagnies comme Microsoft, Adobe décident de se tourner au open source, cela va grandement contribuer à l'avance
+de l'open source ainsi qu'à ses développements. Il aura donc plus de logiciels open source disponible pour nous tous.
+
+Aussi, si c'est une compagnie contribue fortement à un projet open source, un développeur peut se faire remarquer par la compagnie en apportant des 
+contributions importantes au projet. Cela peut donc devenir un potentiel futur emploie pour le développeur contribuant au projet open source.
+
+
+#### 2. Décrivez 3 défis qu'impose la mise en place d'un projet open source et justifiez.
+
+1. Un premier défi est d'avoir une bonne définition des objectifs du projet à l'aide des divers outils de documentation 
+lors de la mise en place du produit pour que les futurs contributeurs comprennent bien la vision du projet 
+et ainsi pour qu'ils puissent apporter des contributions en lien avec le but du projet.
+
+2. Un autre défi lors de la mise en place d'un projet open source est de savoir dire non aux contribueurs apportant des contributions éloignant le projet
+de sa raison d'être. Un projet open source va éventuellement avoir de nombreuses contributions externes, et certaines contributions ne correspondront pas aux critères du projet. 
+Un défi sera alors de cibler ses contributions et ensuite politement expliquer la situation au contributeur pour lui mentionner la raison qui amène le rejet de
+sa contribution.
+
+3. Le dernier défi lors de la mise en place d'un projet open source est l'acceptation d'une licence commune pour que les contributeurs sachent 
+comment ils peuvent contribuer au projet. En effet, chaque projet logiciel open source doit avoir une licence quelqconque car c'est 
+cette licence qui définit les politques de contributions et les méthodes d'utilisation du logiciel. On peut donc mentionner qu'un défi lors de la mise en place
+d'un projet open source est de bien choisir la licence pour que les contributeurs ont les droits de contributions et d'utilisation selon les désirs 
+du créateur.
+
+
+#### 3. Quelle information vous a-t-elle le plus surprise à propos de l'open source?
+
+Plusieurs informations nous ont grandement surpris lors de l'apprentissage de l'open source. Tout d'abord, nous avons été très surpris de voir que 
+n'importe qui a les droits de contribuer au projet open source comme bon il le semble. Nous pensions que c'était seulement une certaine catégorie 
+de développeur qui pouvait contribuer ou bien qu'il fallait avoir un "rôle" dans le projet open source en question pour y contribuer.
+
+Sur un autre niveau, ce qui nous a le plus surpris est que certaines des plus grosses compagnies au monde comme IBM, Adobe, SAP participe activement dans la communauté de l'open source. 
+Aussi, de voir que même des compagnies comme Microsoft, qui a la base s'opposait contre les avancements de l'open source, sont rendu à mettre la majortié de leur principal 
+logiciel en open source.
+
+### Éxecution
+
+#### Créer un fichier pour le "Code of conduct" en suivant les meilleures pratique. Si vous utilisez un template, vous devez en citer la source et expliquer pourquoi vous l'avez utilisé.
+
+Pour notre "Code of conduct", nous avons utiliser le template de "Contributor Covenant'. Celui-ci est un des templates offerts par github pour le "Code of conduct".
+
+Nous avons utilisés le "Code of conduct" de Contributor Covenant car nous trouvons que ce code de conduite prône une communauté agréable ouvert d'esprit qui n'accepte en 
+aucun cas les commentaires rabaissants ou autre type d'attaques personnels. En effet, le code de conduite que nous avons utilisé mentionne qu'il accepte tous les types
+d'individus peu importe la nationalité, la couleur de peau, la religion etc.. et qu'il prône le respect des individus sans accepter les commentaires discriminants entre contributeurs.
+Le code de conduite cherche vraiment a établir une communauté ou le développement logiciel est agréable. Nous avons également bien aimé le fait qu'il est mentionnée que les propriétaires du projets 
+peuvent prendre les mesures nécessaire pour retirer des personnes néfastes ou des commentaires haineux. Aussi, les directives d'applications
+sont extrêmement clairs et bien détaillées. 
+
+Bref, le code de conduite de "Contributor Convenant" encoure le comportement que l'on veut voir pour notre projet.
+
+
+#### Créer un fichier pour la licence en suivant les meilleures pratiques. Indiquez les 3 raisons principales (dans le fichier d'exercice) pour lesquelles vous avez choisi cette licence par rapport aux autres.
+
+
+Comme vous pouvez l'apercevoir, nous avons décidé de choisir la license MIT. 
+
+Comme nous développons un simple projet d'école, notre équipe était très ouvert à ce que les contributeurs externes puissent modifier et utiliser notre 
+code comme bon leur semble dans le futur. Nous avons donc choisit la license MIT pour ses raisons :
+
+
+1. La licence MIT a une description extrêmement simple à comprendre, elle utilise moins de mots que "The Apache license" pour documenter ses règlementations.
+
+2. La licence MIT est bien connu dans le monde de l'open source. Les futurs développeurs désirant contribuer à notre projet n'auront donc pas 
+à se casser la tête à essayer de comprendre notre licence car fort probablement, ils connaisseront déjà la licence MIT ainsi que ses règlementations.
+
+3. Finalement, une autre raison de l'utilisation de celle-ci, comparément à la licence GPL par exemple, est que plus de gens peuvent utiliser notre logiciel.
+Comme plus de gens peuvent utiliser notre logiciel, on aura tendance à obtenir plus de contributions et donc de développer une meilleur communauté pour notre projet open source.
+
+
+#### Créer un fichier pour la contribution décrivant les meilleures pratiques de collaboration et de développement que vous voulez encourager au sein du projet. Si vous utilisez un template, vous devez en citer la source et expliquer pourquoi vous l'avez utilisé.
+
+Pour le fichier de contributation, nous avons pris le [template suivant](https://github.com/auth0/open-source-template/blob/master/GENERAL-CONTRIBUTING.md). 
+Cependant, nous avons apporté des modifications à ce fichier de contribution pour que celui ci soit mieux adapté à notre projet.
+
+Nous avons pris ce template pour plusieurs raisons. 
+
+Premièrement, nous avons bien aimé le texte d'accueil au début du fichier de contribution. On trouve que cette petite description décrit 
+un environnement de développement "user-friendly", ce qui va encourager les développeurs a contribué à notre projet davantage.
+
+Ensuite, on trouve que ce template est extrêmement bien réparti, on découpe bien la section Issue, la section Pull request, 
+on indique bien comment un développeur peut demande de l'aide ainsi qu'on mentionne clairement que chaque contributeur doit accepter les critères de notre code de conduite.
+
+
+Finalement, le proccessus des pull request et des issues est simple, bien défini et respecte bien les
+techniques et normes que nous avons vu dans la matière du cours. Nous avons également modifié un peu ses partis pour que les critères 
+que nous avons établis en équipe pour notre projet soit bien mentionnée dans la section pull-request et issue.
+
+
+
+
