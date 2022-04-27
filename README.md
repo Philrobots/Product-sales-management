@@ -72,7 +72,7 @@ Every documentation to understand the guideline for this open source project is 
 
 
 
-## 🧩 Components
+## 🧩 Deployment
 
 Below is a list of our app with link to their live versions.
 
