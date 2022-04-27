@@ -79,7 +79,7 @@ Below is a list of our app with link to their live versions.
 | Component | Environment | Live URL                                                 | Badge |
 | --------- | ----------- | ---------------------------------------------------------|--------|
 | API       | Staging     | https://processus-equipe-11-staging.herokuapp.com/       | ![example workflow](https://github.com/GLO2003-H22-eq11/H22-projet/actions/workflows/deployStaging.yml/badge.svg) |
-| API       | Prod        | https://processus-equipe-11-production.herokuapp.com/    | ![example workflow](https://github.com/GLO2003-H22-eq11/H22-projet/actions/workflows/deployProd.yml/badge.svg)|
+| API       | Prod        | https://processus-equipe-11-production.herokuapp.com/    | ![example workflow](https://github.com/GLO2003-H22-eq11/H22-projet/workflows/DeployProduction/badge.svg)|
 
 
 
@@ -102,12 +102,12 @@ After running the app, the API will be served at `http://localhost:8000`.
 
 Every release will have its own documentation where we will list completed features and any other information related to the given release.
 
-| Release   | Documentation file                  |  tags        |
-| --------- | ----------------------------------- | -------------|
-| Release 1 | [RELEASE_1.md](./exercices/tp1.md)  | remise1      |
-| Release 2 | [RELEASE_2.md](./exercices/tp2.md)  | remise2      |
-| Release 3 | [RELEASE_3.md](./exercices/tp3.md)  | remise3      |
-| Release 4 | [RELEASE_3.md](./exercices/tp4.md)  | remise4      |
+| Release   | Documentation file                 |  tags        |
+| --------- |------------------------------------| -------------|
+| Release 1 | [RELEASE_1.md](./exercices/tp1.md) | remise1      |
+| Release 2 | [RELEASE_2.md](./exercices/tp2.md) | remise2      |
+| Release 3 | [RELEASE_3.md](./exercices/tp3.md) | remise3      |
+| Release 4 | [RELEASE_4.md](./exercices/tp4.md) | remise4      |
 
 
 ## ⭐️ Contributors
